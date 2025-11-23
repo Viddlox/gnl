@@ -25,7 +25,7 @@ char	*ft_strjoin_gnl(char *prev, char *buffer, ssize_t bytes)
 		i++;
 	res = malloc(i + bytes + 1);
 	if (!res)
-		return (NULL);
+		return (free(prev), NULL);
 	i = 0;
 	while (prev && prev[i])
 	{
